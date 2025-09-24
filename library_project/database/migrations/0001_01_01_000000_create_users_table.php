@@ -28,6 +28,18 @@ return new class extends Migration
             "password"=> "admin123"
         ]);
 
+        User::create([
+            "name" => "Teszt1",
+            "email" => "teszt1@teszt.com",
+            "password"=> "teszt123"
+        ]);
+
+        User::create([
+            "name" => "Teszt2",
+            "email" => "teszt2@teszt.com",
+            "password"=> "Teszt234"
+        ]);
+
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
